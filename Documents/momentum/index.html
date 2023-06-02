@@ -8,7 +8,18 @@
   <title>Momentum</title>
 </head>
 <body>
-  <h1 class="title">Grab me!</h1>
+  <form id="login-form">
+    <input
+      aria-label="form"
+      type="text"
+      placeholder="What is your name?"
+      required
+      maxlength="15"
+      >
+    <button>Log In</button>
+  </form>
+
+  <h1 id="greeting" class="hidden" aria-label="greet"></h1>
   <script src="app.js"></script>
 </body>
 </html>

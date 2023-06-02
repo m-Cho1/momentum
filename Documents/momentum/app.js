@@ -1,28 +1,14 @@
-const $title = document.querySelector('.title');
+const $loginForm = document.querySelector('#login-form');
+const $loginInput = $loginForm.querySelector('input');
+const $greetingH1 = document.querySelector('#greeting');
 
-isTitleClicked = true;
-
-function clickTitle() {
- isTitleClicked = !isTitleClicked;
-  if (isTitleClicked) {
-    $title.style.color = "gold";
-
-  } else {
-    $title.style.color = 'red';
-  }
+function onLoginSubmit(event) {
+  event.preventDefault();
+  const username = $loginInput.value;
+  $loginForm.classList.add('hidden')
+  console.log("username: ", username);
+  $greetingH1.innerHTML = 'Hello ' + username;
+  $greetingH1.classList.remove('hidden');
 }
 
-$title.addEventListener('click', clickTitle);
-
-function mouseEnter() {
-  $title.innerHTML = 'Mouse is here!'
-  console.log('the mouse has entered');
-}
-
-function mouseLeave() {
-  $title.innerHTML = 'Mouse left!'
-  console.log('the mouse has left');
-}
-
-$title.addEventListener('mouseenter', mouseEnter);
-$title.addEventListener('mouseleave', mouseLeave);
+$loginForm.addEventListener('submit', onLoginSubmit);
