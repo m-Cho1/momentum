@@ -11,20 +11,19 @@ if (savedUsername === null) {
   $loginForm.addEventListener("submit", onLoginSubmit);
 
 } else {
-  $loginForm.classList.add('hidden');
-  paintGreetings(savedUsername);
+  paintGreetings();
 }
 
 function onLoginSubmit(event) {
   event.preventDefault();
   const usernameValue = $loginInput.value;
   $loginForm.classList.add('hidden')
-  console.log("username: ", usernameValue);
   localStorage.setItem('username', usernameValue);
-  paintGreetings(usernameValue);
+  paintGreetings();
 }
 
-function paintGreetings(name) {
-  $greetingH1.innerText = "Hello " + name;
+function paintGreetings() {
+  const value = localStorage.getItem("username")
+  $greetingH1.innerText = "Hello " + value;
   $greetingH1.classList.remove("hidden");
 }
