@@ -13,12 +13,15 @@ function saveTodos() {
 function deleteTodo(event) {
   const deleteLi = event.target.parentElement;
   deleteLi.remove();
+  todosStorage = todosStorage.filter(todo => todo.id !== parseInt(deleteLi.id));
+  saveTodos();
 }
 
 function renderTodo(newTodo) {
   const li = document.createElement('li');
+  li.id = newTodo.id;
   const span = document.createElement('span');
-  span.innerText = newTodo;
+  span.innerText = newTodo.text;
   const button = document.createElement('button');
   button.innerText = "❌";
   button.addEventListener('click', deleteTodo)
@@ -32,8 +35,13 @@ function handleTodoSubmit(e) {
   console.log('todo input value: ', $todoInput.value)
   const newTodoInput = $todoInput.value;
   $todoInput.value = '';
-  todosStorage.push(newTodoInput);
-  renderTodo(newTodoInput);
+
+  const newTodoObj = {
+    text: newTodoInput,
+    id: Date.now()
+  };
+  todosStorage.push(newTodoObj);
+  renderTodo(newTodoObj);
   saveTodos();
 }
 
