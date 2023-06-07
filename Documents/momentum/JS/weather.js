@@ -2,6 +2,7 @@ function onGeoSuccess(position) {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
   console.log('position: ', 'lat: ',latitude, 'lon: ',longitude);
+  console.log('geolocation')
 }
 
 function onGeoErr() {
