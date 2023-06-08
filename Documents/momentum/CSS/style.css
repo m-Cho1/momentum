@@ -36,6 +36,36 @@ body {
   position: relative;
   top: 5rem;
   z-index: 1;
+  border: none;
+}
+
+#login-form input {
+  border: none;
+  background-color: transparent;
+  color: white;
+  width: 11rem;
+  height: 3rem;
+  font-size: 1.2rem;
+}
+
+#login-form input:focus {
+  outline: none;
+  border-bottom: 2px solid wheat;
+}
+
+#login-form input::placeholder {
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+#login-form button {
+  width: 4rem;
+  height: 3rem;
+  margin-left: 1rem;
+  border: 1px solid azure;
+  border-radius: 0.6rem;
+  color: aliceblue;
+  background-color: transparent;
 }
 
 #clock {
@@ -47,9 +77,12 @@ body {
 
 #weather-container {
   color:antiquewhite;
-  position: relative;
-  top: 22rem;
+  position: absolute;
+  top: 1rem;
   z-index: 1;
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 #todo-form {
@@ -63,4 +96,11 @@ body {
   top: 18rem;
   color: aliceblue;
   z-index: 1;
+}
+
+ul {
+  border: 1px solid wheat;
+  width: 5rem;
+  height: 100%;
+  text-align: center;
 }
