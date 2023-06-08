@@ -11,6 +11,7 @@ const images = [
 const randomImg = images[Math.floor(Math.random() * images.length)];
 
 const $bgImage = document.createElement('img');
+$bgImage.setAttribute('class', 'background');
 $bgImage.src = `img/${randomImg}`;
 
 document.body.appendChild($bgImage);

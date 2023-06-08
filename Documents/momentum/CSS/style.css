@@ -1,3 +1,66 @@
+body {
+  text-align: center;
+  margin: 0 auto;
+}
+
 .hidden {
   display: none;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  margin: 0;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  z-index: 0;
+}
+
+#greeting {
+  position: relative;
+  top: 5rem;
+  color: antiquewhite;
+  z-index: 1;
+}
+
+#quote {
+  position: relative;
+  top: 10rem;
+  z-index: 1;
+  color: antiquewhite;
+}
+
+#login-form {
+  position: relative;
+  top: 5rem;
+  z-index: 1;
+}
+
+#clock {
+  position: relative;
+  top: 15rem;
+  z-index: 1;
+  color: antiquewhite;
+}
+
+#weather-container {
+  color:antiquewhite;
+  position: relative;
+  top: 22rem;
+  z-index: 1;
+}
+
+#todo-form {
+  position: relative;
+  top: 17rem;
+  z-index: 1;
+}
+
+#todo-list {
+  position: relative;
+  top: 18rem;
+  color: aliceblue;
+  z-index: 1;
 }
