@@ -1,6 +1,7 @@
 body {
   text-align: center;
   margin: 0 auto;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .hidden {
@@ -19,6 +20,7 @@ body {
 }
 
 #greeting {
+  font-size: 4rem;
   position: relative;
   top: 5rem;
   color: antiquewhite;
@@ -26,10 +28,14 @@ body {
 }
 
 #quote {
-  position: relative;
-  top: 10rem;
+  position: absolute;
+  bottom: 0;
   z-index: 1;
   color: antiquewhite;
+  width: 100%;
+  padding: 0.8rem 0 0.8rem 0;
+  font-size: 1.2rem;
+  background-color: #9e9e9e29;
 }
 
 #login-form {
@@ -46,6 +52,7 @@ body {
   width: 11rem;
   height: 3rem;
   font-size: 1.2rem;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #login-form input:focus {
@@ -86,16 +93,42 @@ body {
 }
 
 #todo-form {
-  position: relative;
-  top: 17rem;
+  position: absolute;
+  top: 10rem;
+  right: 3rem;
   z-index: 1;
+  /* border: 1px solid white; */
+  width: 14rem;
+  height: 2rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#todo-form input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#todo-form input::placeholder {
+  font-size: 1rem;
+  color: white;
+}
+
+#todo-form input:focus {
+  border-bottom: 1px solid wheat;
 }
 
 #todo-list {
-  position: relative;
-  top: 18rem;
+  position: absolute;
+  top: 12rem;
+  right: 3rem;
   color: aliceblue;
   z-index: 1;
+  height: auto;
+  padding-bottom: 1rem;
+  width: 12rem;
 }
 
 ul {
