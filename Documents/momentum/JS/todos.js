@@ -33,7 +33,6 @@ function renderTodo(newTodo) {
 
 function handleTodoSubmit(e) {
   e.preventDefault();
-  console.log('todo input value: ', $todoInput.value)
   const newTodoInput = $todoInput.value;
   $todoInput.value = '';
 
